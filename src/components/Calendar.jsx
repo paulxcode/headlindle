@@ -109,7 +109,7 @@ export default function Calendar({ onSelectDate, onBack }) {
         {cells.map((cell, i) => {
           if (!cell) return <div key={`e-${i}`} />
 
-          const dateStr = cell.toISOString().split("T")[0]
+          const dateStr = `${cell.getFullYear()}-${String(cell.getMonth() + 1).padStart(2, "0")}-${String(cell.getDate()).padStart(2, "0")}`
           const fut = isFuture(cell)
           const dot = getResultDot(dateStr)
           const td = isToday(cell)
