@@ -1,3 +1,3 @@
 export const config = {
-  adsEnabled: true,
+  adsEnabled: false,
 }
